@@ -12,7 +12,7 @@ post '/create-user' do
   last_name = data["sobrenome"]
   email = data["email"]
   password_digest = data["password_digest"]
-  
+
   buscaEmail = Users.find_by(email: email)
   
   if buscaEmail
@@ -22,7 +22,6 @@ post '/create-user' do
     begin
       verification_token = SecureRandom.hex(10)
 
-      # Criando o usuário
       user = Users.create!(
         first_name: first_name,
         last_name: last_name,
