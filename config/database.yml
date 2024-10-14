@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  database: gerenciamento_propriedades
+  username: vitorbatista1
+  password: admin
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: gerenciamento_propriedades_test
+  username: vitorbatista1
+  password: admin
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: gerenciamento_propriedades_prod
+  username: vitorbatista1
+  password: admin
+  host: localhost
