@@ -6,7 +6,7 @@ post '/items' do
     begin
       data = JSON.parse(request.body.read)
       item = Item.create!(nome: data['nome'], descricao: data['descricao'])
-  
+      
       status 201
       item.to_json
     rescue StandardError => e
@@ -17,7 +17,6 @@ post '/items' do
   
   put '/items/:id' do
     begin 
-      id = params['id']
       item = Item.find(params['id'])
       data = JSON.parse(request.body.read)
       item.update!(nome: data['nome'], descricao: data['descricao'])
